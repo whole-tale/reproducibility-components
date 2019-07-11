@@ -1,0 +1,74 @@
+% start of document preamble
+
+%%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
+\documentclass[sigconf,screen,nonacm]{acmart}
+%\documentclass[sigconf]{acmart}
+
+%\acmConference[TaPP]{Theory and Practice of Provenance}{June 3, 2019}{Philadelphia, PA}
+%\setcopyright{rightsretained}
+
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+ 
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=3 mm}
+
+\input{abstract}
+
+
+% start of the body of the document body.
+\begin{document}
+
+% title
+\title[Reproducibility by Other Means]{Reproducibility by Other Means: Transparent Research Objects}
+
+\author{Timothy McPhillips  \qquad Bertram Lud\"ascher}
+% BL: The braces don't seem to work ... 
+%\email{\{tmcphill,lanl2,nnp2,ludaesch\}@illinois.edu}
+ 
+% BL: so let's do some manual hacking: 
+\affiliation{%
+  \institution{School of Information Sciences,  University of Illinois at Urbana-Champaign\\ 
+    \texttt{\{tmcphill,ludaesch\}@illinois.edu} }
+}
+
+% This command processes the author and affiliation and title information and builds the first part of the formatted document.
+\maketitle
+
+\input{introduction}
+\input{outline}
+\input{reproducibility}
+\input{repeatability}
+\input{terminology}
+\input{limitations}
+\input{transparency}
+\input{conclusion}
+
+
+%\section{Example Provenance Questions}
+
+%Let's do some \emph{italics} and \texttt{teletype} and \textsf{sans
+%  serif}. Does it work?
+%Here's a bit of code, very simple via \verb|some verbatim| in line, or
+%\begin{verbatim}
+%.. in some separate verbatim paragraphs ..
+%Does it work?
+%   Even indentation should work .. 
+%\end{verbatim}
+
+
+%\section{Future Work}
+
+
+% \begin{acks}
+% Work supported in part by NSF award 1541450 (Whole Tale).
+% \end{acks}
+
+%
+% The next two lines define the bibliography style to be used, and the bibliography file.
+%\bibliographystyle{alpha-initials-big}
+\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}

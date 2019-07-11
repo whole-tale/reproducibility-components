@@ -1,0 +1,106 @@
+\section{Maintaining repeatability}\label{sec-limitations}
+
+Another way Research Objects can contribute to scientific transparency is by
+	clarifying claims about computational repeatability.
+Just as the overall scientific reproducibility of a study represented by a Research Object
+	might be described precisely in terms of individual components required to 
+	satisfy particular (namespaced) definitions of \emph{reproducible} or \emph{replicable},
+	additional statements could be made about the various dimensions of computational
+	reproducibility in particular.
+The aim would be for researchers publishing their work via ROs to be fully aware
+	of the implications of the claims they make about the computations represented
+	by the RO.
+Researchers discovering, evaluating, or using the Research Object for further research
+	 would be able to interpret these claims unambiguously.
+The implications for the possibilities of rerunning, reproducing, or exactly repeating the
+	computations described in the RO under different conditions would be clear
+	to all parties.
+
+As discussed above, \emph{exact repeatability} promises increasingly to be a powerful,
+	new addition to the modern researcher's repertoire of reproducibility techniques.
+At the same time, there appears to be (possibly growing) confusion over what is actually 
+	possible in terms of computational reproducibility generally, exact repeatability 
+	specifically, and the conditions required to achieve them in practice.
+
+The fundamental limitations computers impose on the exact replicability of program executions
+	are well known.
+At the lowest level, finite precision arithmetic, differing word sizes between processors,
+	the effects of round-off errors, and the implications of choosing between different 
+	mathematically equivalent orderings of operations all have the potential to 
+	impose limits on the replicability of scientific computations across different computing environments.
+Virtual machines and software containers cannot fully address issues at this level.
+
+The fact that we can expect options such as full-processor emulation, either in software~\cite{QEMU} 
+	or on customizable hardware, 
+	to provide better guarantees of exact computational repeatability under more circumstances
+	over time reveals the true crux of the problem.
+What we can expect from computers in terms of reproducibility in general, and exact
+	repeatability in particular, is changing quickly---and likely will continue to do so for the
+	foreseeable future.
+In the case of hiding hardware differences, time is on our side---or can be if we happen to save the
+	information actually needed to enable exact re-execution of our analyses in the future.
+
+In many other cases, time works against repeatability.
+A Dockerfile that today correctly produces the software environment in which computations were originally
+	performed may not do so a year from now--if it builds at all.
+Due to the dependencies of most scientific software on packages not
+	bundled with the language compiler or runtime (with these packages typically depending on 
+	other packages, and so on), the chances of rebuilding or rerunning software
+	equivalent to that used to produce a result in a Research Object decreases
+	rapidly with time.
+Fortunately, time also works for us in this dimension as well, as new ways of specifying software
+	environments and archiving dependencies emerge.
+But again the issue arises---are we saving the right information to enable computational repeatability
+	in the future?
+
+What Research Objects can offer here is analogous to the proposed function of mediating between competing
+	and contradictory definitions of reproducibility and replicability.
+Rather than trying to anticipate all future developments in the area of computational reproducibility,
+	and representing computing environments, software dependencies, and machine information
+	in a way that we hope will be usable by future technologies, we can take the pluralistic
+	path here as well. 
+We can characterize the various dimensions in which computing technology currently supports---or fails to
+	support---exact repeatability; then create mappings from the specific capabilities
+	of existing technologies (Docker~\cite{docker2019}, Singularity~\cite{Singularity2019}, Jupyter~\cite{jupyter2019}, etc) 
+	and software stacks (Binder~\cite{Binder_2018}, Whole Tale~\cite{WT2019}, etc)
+	onto these dimensions.
+As new technologies that better (or differently) support computational reproducibility emerge or gain acceptance,
+	the capabilities of these tools can be mapped as well; and the common, underlying model can be enhanced as needed.
+ 
+The advantage of including such capabilities in Research Objects is that researchers could be made aware
+	of the implications of the various technologies, programming environments, and specification
+	standards they choose to use employ.
+It is easy to imagine a current-day researcher intending to enable others to reproduce their computational
+	results by sharing any custom source code or scripts in a Git repository, along with the Dockerfile
+	they used to create the computing environment in which they worked.
+While this is laudable, and almost certainly better than nothing, in many cases it is likely the researcher's
+	expectations with regard to how these actions will ensure reproducibility will exceed
+	what is actually the case.
+If instead the researcher composed their study as a Research Object, they could be prompted---by whatever
+	software environment they are using to create the RO---for details about their precise expectations with 
+	regard to reproducibility.
+They may then find that a Dockerfile that does not specify the version of the base image, for example, is not sufficient
+	to meet their expectations.
+When faced with the current limitations of available technology they may choose to archive the Docker image itself, 
+	or even a virtual machine image, while still being made aware of the limitations associated with these alternative
+	approaches.
+
+Researchers evaluating an RO similarly could probe its reproducibility capabilities.  One might discover for example
+	that an RO comes with a Dockerfile that currently references a non-existent base image.  
+Or that it depends on a software package no longer available in the Ubuntu Apt Repository.  
+The archived Docker image referenced in the RO might no longer be compatible with the latest version of Docker.  
+These are all challenging issues to discover, debug, and remediate even for experts in these technologies.
+Making Research Objects \emph{transparent} with respect to their actual reproducibility capabilities would be a
+	step forward for making the computational components of scientific research reproducible and
+	transparent.
+
+This, too, is an area that Whole Tale is investigating.  Our aim is to make the actual implications of the
+	reproducibility capabilities we offer completely transparent, including (or especially) their limitations.
+Similarly, when providing users means for exporting Tales in other formats, we are committed to highlighting
+	to researchers the advantages and disadvantages of the various options with respect to reproducibility.
+	
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End: 

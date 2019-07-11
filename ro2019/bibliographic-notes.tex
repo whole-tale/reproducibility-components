@@ -1,0 +1,251 @@
+%%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
+\documentclass[sigconf,screen,nonacm]{acmart}
+%\documentclass[sigconf]{acmart}
+
+% * CodeOcean ``guaranteed reproducibility'' 
+% * GigaScience magazine article 
+% * 1920s (?) quote about ``it's all made up''  
+
+
+% start of document preamble
+
+
+
+%\acmConference[TaPP]{Theory and Practice of Provenance}{June 3, 2019}{Philadelphia, PA}
+%\setcopyright{rightsretained}
+
+% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+ 
+\usepackage[english]{babel}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=3 mm}
+
+
+\newcommand{\mypara}[1]{\vspace{6pt}\noindent\textbf{#1}~}
+
+
+% start of the body of the document body.
+\begin{document}
+
+% title
+\title{Bibliographic Notes}
+
+%\author{Timothy McPhillips  \qquad Bertram Lud\"ascher}
+ 
+% BL: so let's do some manual hacking: 
+% \affiliation{%
+%   \institution{School of Information Sciences,  University of Illinois at Urbana-Champaign\\ 
+%     \texttt{\{tmcphill,ludaesch\}@illinois.edu} }
+% }
+
+% This command processes the author and affiliation and title information and builds the first part of the formatted document.
+\maketitle
+
+
+% The next two lines define the bibliography style to be used, and the bibliography file.
+
+
+\tableofcontents
+
+\section{From the CS Types}
+
+\mypara{What is Reproducibility? The R* Brouhaha
+  \cite{carolegoble2016what}.} This is a presentation given by \textsc{Goble}
+at the Alan Turing Institute Symposium Reproducibility, Sustainability
+and Preservation , 6-7 April 2016, Oxford, UK. In this presentation
+the following terminology is used:
+  \begin{itemize}
+  \item \textbf{rerun}: variations of experiment and set up \hfill (\emph{robust})
+  \item \textbf{repeat}: same experiment, same set up, same lab \hfill (\emph{defend})
+  \item \textbf{replicate}: same experiment, same set up, independent lab
+    \hfill (\emph{certify})
+  \item \textbf{reproduce}: variations on experiment, on set up, independent
+    labs \mbox{~~~~} \hfill  (\emph{compare})
+  \item \textbf{reuse}: different experiment \hfill (\emph{transfer})
+  \end{itemize}
+Also distinguishes between ``micro reproducibility'' (within the
+research environment) and ``macro reproducibility'' (through peer
+review / publication). 
+
+Different uses: ``personal productivity'' and ``reproducibility:
+public good'' (cf.\ \emph{provenance for self} vs \emph{provenance for
+  others'}). 
+
+Also mentions 
+\begin{itemize}
+\item \emph{levels of reproducibility} (portability vs depth)
+\item \emph{repeatable environments} and \emph{research objects }
+\item link to \emph{FAIR}
+\end{itemize}
+
+\mypara{PRIMAD \cite {rauber16primad}.} Starting point for the
+development of the initial PRIMAD model \cite {rauber16primad} was a
+question raised\footnote{by Bertram :-)} at the Dagstuhl seminar
+\cite{freire2016reproducibilitya}: ``What is the \emph{information
+  gain} of a reproducibility study?'' BL suggested that successful
+replication is often less informative than a failed one.  But then
+again, it depends on the ``delta'' between the original study and the
+replication: e.g., if you keep ``everything'' the same (data, params,
+software, platform, experimenter, etc.) a successful replication
+provides little new information\footnote{other than the
+  algorithm/method seems to be deterministic!}. However, in this case,
+a failed replication consitutes a huge information gain: we must be
+missing something! Conversely, if we ``wiggle'' a lot (we have a large
+$\Delta$) and change some or all of data, params, implementation,
+platform, human agents, etc.)  and still get the ``same'' results, we
+learned a lot: the method/results/findings are robust! As a rule of
+thumb:
+\begin{itemize}
+\item the more elements you wiggle (or ``prime'' in PRIMAD parlance)
+  and still get a positive outcome, the more robust the method (or
+  claims, finding, etc.) and
+\item  the fewer elements you wiggle and get a
+negative outcome, the more you learn about what you're missing!
+\end{itemize}
+
+% The more you ``wiggle'' or ``prime'' some key elements and you still
+% get a successful outcome the ``better''. Conversely, the more similar
+% the replication study 
+
+\noindent Although PRIMAD is a first attempt to go beyond
+terminological clarification and will likely evolve, it has already
+been applied and studied
+\cite{ferro2016increasing,gryk2017workflows,chapp2019applicability}. Hopefully
+more is coming ...
+
+
+\mypara{Provenance.} \cite{pimentel2019survey} 
+
+\section{Terminologies}
+
+
+
+\mypara{Sorting out Terminologies.}  \textsc{Plesser}
+\cite{plesser2018reproducibility} tries to sort out the different
+terminologies and has a table that shows how \textsc{Claerbout}
+\cite{claerbout1992electronic,schwab2000making} and \textsc{ACM}
+\cite{acm2018artifact} disagree and how they align with
+\textsc{Goodman} \cite{goodman2016what}. Plesser states that
+``\cite{goodman2016what} propose a new lexicon for research
+reproducibility with the following definitions: \textbf{Methods
+  reproducibility}: provide sufficient detail about procedures and
+data so that the same procedures could be exactly repeated;
+\textbf{Results reproducibility} obtain the same results from an
+independent study with procedures as closely matched to the original
+study as possible; \textbf{Inferential reproducibility}: draw the same
+conclusions from either an independent replication of a study or a
+reanalysis of the original study.''  \cite{plesser2018reproducibility}
+also praises \cite{goodman2016what} as ``an important step out of the
+terminology quagmire in which the active and fruitful debate about the
+trustworthiness of research has been stuck for the past decade,
+because it sidesteps confounding common language associations of terms
+by explicit labeling (explicit is better than implicit; Peters,
+2004). One can only wish that it will be adopted widely so that the
+debate can once more focus on scientific rather than language
+issues.''
+
+\section{From the Sciences}
+
+
+\mypara{Replicability or reproducibility? On the replication crisis in
+  computational neuroscience and sharing only relevant detail
+  \cite{milkowski2018replicability}.} From the abstract: ``we draw on
+methodological studies into the replicability of psychological
+experiments and on the mechanistic account of explanation to analyze
+the functions of model replications and model reproductions in
+computational neuroscience. We contend that \textbf{model
+  replicability}, or independent researchers' ability to obtain the
+same output using original code and data, and \textbf{model
+  reproducibility}, or independent researchers' ability to recreate a
+model without original code, \textbf{serve different functions and
+  fail for different reasons}. This means that \textbf{measures
+  designed to improve model replicability may not enhance (and, in
+  some cases, may actually damage) model reproducibility}. We claim
+that although both are undesirable, low model reproducibility poses
+more of a threat to long-term scientific progress than low model
+replicability. In our opinion, low model reproducibility stems mostly
+from authors' \textbf{omitting to provide crucial information in
+  scientific papers and we stress that sharing all computer code and
+  data is not a solution}. Reports of computational studies should
+remain selective and include all and only relevant bits of code.''
+ 
+So this makes a big point about \textbf{model replication}
+vs. \textbf{model reproduction}. Here's another excerpt: 
+\begin{quote}
+Only by
+\textbf{reproducing} a model, or offering what \textbf{psychologists}
+would call a \textbf{conceptual replication}, can we discover the
+model's hidden assumptions, bugs or unexpected interactions. Moreover,
+\textbf{a successful reproduction contributes to model
+  validation}. \textbf{Validation} is methodologically more valuable
+than \textbf{verification} because it shows\textbf{ how an implemented
+  model corresponds to empirical data}. In particular, by validating a
+computational model through reproduction we make sure that the results
+of modeling are sound (see Drummond 2009 for a similar argument).
+\end{quote}
+
+More quotes:
+
+\begin{quote}
+As far as model reproducibility is concerned, specific rules such as
+those introduced by Sandve et al. (2013) are of \textbf{little help}
+unless they contribute to an understanding of how theoretical
+principles are translated into modeling practice.\textbf{ Indeed, they
+  can improve replicability at the cost of affecting
+  reproducibility}. Specifying the\textbf{ exact computational
+  platform should not be required as long as software is designed to
+  be portable for interoperability.} With the exception of the use of
+supercomputers, specialized hardware or very sensitive real- time
+requirements, if the details of the computational architecture count
+then the model may be too sensitive to improper background conditions,
+and its scientific value is limited. It is simply poor-quality
+code. Thus, while avoiding prototype code and quick hacks is difficult
+in actual scientific work, \textbf{this kind of code should be
+  discardable}. It should be possible to reconstruct the model with no
+knowledge of such detail, from a paper only.  What we suggest, then,
+is that \textbf{a paper should above all contain all and only
+  information needed to reproduce a model and assess the model's
+  intended relationship to its target.} By contrast, information
+necessary to \textbf{replicate} a model, including code and
+experimental data sets, should be deposited in open repositories
+(Migliore et al. 2003). Research papers and repositories serve
+different functions, though ultimately both should contribute to the
+same overarching goal of making science cumulative. If science
+communication continues to rely on journal papers then too much
+irrelevant detail will make reading (and reviewing) them
+impossible. Open model repositories facilitate replication and code
+reuse.
+\end{quote}
+
+
+\mypara{Open is not enough \cite{chen2019open}.}  Subtitle / tag-line
+: ``The solutions adopted by the high-energy physics community to
+foster reproducible research are examples of best practices that could
+be embraced more widely. \textbf{This first experience suggests that
+  reproducibility requires going beyond openness}.'' Includes table
+corresponding to the``6 Rs'' from \textsc{Goble}
+\cite{carolegoble2016what} (also credits \textsc{Barba}); then goes on
+to refine that model for HEP context. Mentions \emph{guiding
+  principles towards reproducibility}:
+\begin{itemize}
+\item Define your reproducibility goals
+\item Incorporate best practices early in your research
+\item Build on what is there
+\item Structure your knowledge
+\item Capture your workflows
+\item Raise awareness
+\item Embrace openness whenever possible
+\item Enable liberal and fair reuse
+\end{itemize}
+Mentions in the conclusions: ``Sharing data is not enough; it is also
+\textbf{essential to capture the structured information about the
+  research data analysis workflows and processes} to ensure the
+usability and longevity of results.''
+
+\bibliographystyle{alpha-initials-big}
+%\bibliographystyle{abbrv}
+\bibliography{main}
+
+\end{document}
+

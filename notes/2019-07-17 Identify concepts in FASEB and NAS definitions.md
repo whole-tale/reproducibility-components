@@ -46,6 +46,8 @@
 - Copied the definitions to the whiteboard below, and extracted nouns, verbs, modifiers and important combinations of these:
 ![enter image description here](https://raw.githubusercontent.com/tmcphillips/reproducibility-components/master/whiteboards/whiteboard-2019-07-17-NAS-definitions.png)
 
+* The extracted terms and concepts are:
+
 |Nouns          |Verbs    |Modifiers    |Concepts                      |
 |---------------|---------|-------------|------------------------------|
 |analysis       |aim      |consistent   | aim to answer                |

@@ -1,0 +1,34 @@
+----------------------- REVIEW 2 ---------------------
+SUBMISSION: 6
+TITLE: Reproducibility by Other Means: Transparent Research Objects
+AUTHORS: Timothy McPhillips and Bertram Ludaescher
+
+----------- Open Peer Review -----------
+SELECTION: no
+----------- Quality of Writing -----------
+SCORE: 5 (excellent)
+----------- Research Object / Zenodo -----------
+SCORE: 2 (basic (e.g. Zenodo with PDF and minimal metadata))
+----------- Overall evaluation -----------
+SCORE: 1 (weak accept)
+----- TEXT:
+This article advocates for a focus on transparency in the field of reproducibility, leveraging Research Objects (ROs) to allow alternate vocabularies for terms as well as support the various requirements scientists have for the reproducibility of their work. The article begins by describing the differences in how scientists view reproducibility in different contexts, and suggests exact repeatability as a new area enabled by computational resources. Using the recent FASEB and NAS recommendations and definitions, the article points out specific differences between the use of the terms replicability and reproducibility. Beyond using mediation to help those with different definitions understand each other, the article suggests that tools that create ROs should help users both satisfy and probe the reproducibility of those objects. Finally, the article notes the importance of querying provenance contained in an RO, and suggests such queries should be user-friendly.
+
+* I like the idea that tools help inform users about how an RO supports reproducibility, and the limits it may have. Something that warns a user about having a Dockerfile that references a base image without a version seems very useful.
+
+* I think the idea of making understandable what is required to reproduce work is important, even if a researcher is not going to re-execute that work.
+
+* Is there a good citation for the definition of "transparent"? It may be helpful in the definition in Section 3.
+
+* The NAS report, leaning on Barba's study of the terms, goes into detail about the history of the use of the terms, and describes how different communities (including FASEB) have used the term (pp. 33-36). It also discusses the importance of transparency in line with this article, and states that computational scientists generally define reproducibility as whether the the research "can be checked" (as noted in point 3 in the article). The article spends a decent amount of text exploring the discrepancies between the FASEB and NAS definitions, seeming to argue for more deference to the FASEB perspective. I would suggest more focus on the RO solutions in the text. From my perspective, the term reproducibility seems to have been historically associated with the computational context so I understand why the NAS report continues that association. I understand that science has long been interested in replicated experiments, but I am unaware of a specific historical definition of !
+ reproducibility outside of the computational context. I understand the issues when communities use terms in different ways, and namespaces do offer a technical solution to this problem. However, it's not clear that keeping both definitions aids in human understanding and communication.
+
+* I disagree with the assertion that transparency and re-executability are orthogonal. They can be (e.g. detailed provenance vs. black-box execution), but I would argue that they are more likely aligned (a script that specifies inputs/outputs and intermediate steps can aid both).
+
+* It looks like reference [26] is missing some information.
+
+* I would recommend that Section 2 be combined into Section 1.
+
+In general, I think this is a well-written article that presents some interesting ways reproducibility could be more integrated with Research Objects. However, I think the article would be improved by focusing less on the differences in definitions and more on ideas that seek to promote transparent reproducibility in ROs (e.g. probing existing ROs for potential reproducibility issues).
+
+

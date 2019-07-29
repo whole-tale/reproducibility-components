@@ -12,15 +12,82 @@ SCORE: 1 (none (e.g. only abstract in easychair/github))
 ----------- Overall evaluation -----------
 SCORE: 2 (accept)
 ----- TEXT:
-This paper explores several key concepts in the area of research objects and their application to the scientific enterprise, namely reproducibility, replicability and transparency. The authors raise once again the different understanding of these terms by the different communities and scientific agencies and how this can lead to conflicts when trying to apply these concepts in science in general and while leveraging computational means to support science. Particularly interesting is the terminological clash around replicability and reproducibility illustrated by the recommendations issued e.g. by the FASEB and NAS. This is useful specially for the interested reader who has not participated in these discussions yet.
 
-According to the paper, many of the properties of research objects already can be seen as supporting scientific transparency (understood as the ability to evaluate scientific work without actually having to repeat the steps taken in the reported research). In this regard, the authors claim that "it is possible to achieve computational repeatability without providing research transparency and vice versa. Moreover, exact repeatability is not an essential element of scientific reproducibility in the broadest sense of the term while transparency arguably is.". The key contribution of this paper is to outline ways in which research object could support such notion of transparency, rather than exact computational repeatability, hence the first part of the paper title (Reproducibility by Other Means).
+R1.01 This paper explores several key concepts in the area of research objects
+      and their application to the scientific enterprise, namely
+      reproducibility, replicability and transparency.
 
-The paper makes for an interesting read, and includes several measures that are proposed to achieve the above-mentioned goals. The first measure proposes to address the terminology clash between terms "reproducibility" and "replicability" by adding explicit namespaced metadata inside the research object that allows the author to declare in what sense their research object complies with such properties, e.g. in the sense of NAS (NAS::reproducible), FASEB or others. The second one is by adding additional statements on the different aspects related to computational reproducibility (e.g. Dockerfile pointing to the right image, software packages available in Ubuntu Apt, etc.) so that everyone is aware of the implications for the possibilities of rerunning, reproducing, or exactly repeating the computations described in the research object under different conditions. The third one is by enabling users who are probably unversed in the research object and PROV specifications to run !
- provenance queries that also observe the previous annotations, hence allowing queries that check for unambiguous declarations of reproducibility or replicability.
+R1.02 The authors raise once again the different understanding of these terms
+      by the different communities and scientific agencies and how this can
+      lead to conflicts when trying to apply these concepts in science in
+      general and while leveraging computational means to support science.
 
-All such proposals seem to have been made in the understanding that it is impossible to achieve a perfect solution to these challenges that will remain now and in the future. On the contrary, the bet is made on flexible and expandable means to incorporate the new needs as they appear, supporting change, e.g. an eventual future in which Docker is superseded by another option as the hegemonic containerization solution.
+R1.03 Particularly interesting is the terminological clash around replicability
+      and reproducibility illustrated by the recommendations issued e.g. by the
+      FASEB and NAS.
 
-In summary, this paper first emphasizes the differences between (the different understandings of) scientific reproducibility and computational reproducibility. Then it raises interesting questions related to how we should consider the reproducibility challenge in order to endorse reuse of third party scientific work with increasing confidence. Finally, it provides a vision of how research objects can help to address such challenges, giving hints of requirements that research objects would need to fulfill in that direction.
+R1.04 This is useful specially for the interested reader who has not
+      participated in these discussions yet.
 
-I think all these points will raise interesting discussions at the workshop which hopefully will contribute to consensuate common strategies in this regard and their corresponding action plans by the research object community.
+R1.05 According to the paper, many of the properties of research objects
+      already can be seen as supporting scientific transparency (understood as
+      the ability to evaluate scientific work without actually having to repeat
+      the steps taken in the reported research).
+
+R1.06 In this regard, the authors claim that "it is possible to achieve
+      computational repeatability without providing research transparency and
+      vice versa. Moreover, exact repeatability is not an essential element of
+      scientific reproducibility in the broadest sense of the term while
+      transparency arguably is."
+
+R1.07 The key contribution of this paper is to outline ways in which research
+      object could support such notion of transparency, rather than exact
+      computational repeatability, hence the first part of the paper title
+      (Reproducibility by Other Means).
+
+R1.08 The paper makes for an interesting read, and includes several measures
+      that are proposed to achieve the above-mentioned goals.
+
+R1.09 The first measure proposes to address the terminology clash between terms
+      "reproducibility" and "replicability" by adding explicit namespaced
+      metadata inside the research object that allows the author to declare in
+      what sense their research object complies with such properties, e.g.
+      in the sense of NAS (NAS::reproducible), FASEB or others.
+
+R1.10 The second one is by adding additional statements on the different
+      aspects related to computational reproducibility (e.g. Dockerfile
+      pointing to the right image, software packages available in Ubuntu Apt,
+      etc.) so that everyone is aware of the implications for the possibilities
+      of rerunning, reproducing, or exactly repeating the computations
+      described in the research object under different conditions.
+
+R1.11 The third one is by enabling users who are probably unversed in the
+      research object and PROV specifications to run provenance queries that
+      also observe the previous annotations, hence allowing queries that check
+      for unambiguous declarations of reproducibility or replicability.
+
+R1.12 All such proposals seem to have been made in the understanding that it is
+      impossible to achieve a perfect solution to these challenges that will
+      remain now and in the future.
+
+R1.13 On the contrary, the bet is made on flexible and expandable means to
+      incorporate the new needs as they appear, supporting change, e.g. an
+      eventual future in which Docker is superseded by another option as the
+      hegemonic containerization solution.
+
+R1.14 In summary, this paper first emphasizes the differences between (the
+      different understandings of) scientific reproducibility and computational
+      reproducibility.
+
+R1.15 Then it raises interesting questions related to how we should consider
+      the reproducibility challenge in order to endorse reuse of third party
+      scientific work with increasing confidence.
+
+R1.16 Finally, it provides a vision of how research objects can help to address
+      such challenges, giving hints of requirements that research objects would
+      need to fulfill in that direction.
+
+R1.17 I think all these points will raise interesting discussions at the
+      workshop which hopefully will contribute to consensuate common strategies
+      in this regard and their corresponding action plans by the research
+      object community.

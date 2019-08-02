@@ -1,28 +1,31 @@
 \section{Reproducibility Queries}\label{sec-transparency}
 
-Research Objects long have been advocated as vehicles for sharing the 
+Research Objects long have been advocated as vehicles for sharing the
 	provenance of scientific results and data products~\cite{bechhofer2013whya}.
 Whole Tale currently is turning its attention to provenance capabilities, placing particular
 	focus on leveraging provenance management techniques and technologies
 	to enhance the reproducibility and transparency of Tales.
 Here we list some ways we see our prior efforts in the area
 	of science-oriented provenance queries contributing to this effort in Whole Tale,
-	and how such query capabilities can enhance reproducibility and transparency in 
+	and how such query capabilities can enhance reproducibility and transparency in
 	Research Objects generally.
 
-For provenance management systems, representations, and user interfaces to support 
-	scientific transparency, they must support science-oriented queries.
+For provenance management systems, representations, and user interfaces to support
+	scientific transparency, they must support science-oriented queries: to be transparent,
+    any scientific setup should admit questions about its own construction, inputs, outputs
+    and function up to aquiring enough information for re-creating and modifiying it to a
+    relevant, approximate degree \cite{resnick2000beyond}.
 Provenance must address questions about the \emph{science} that was performed---not just the
 	sequence, dependencies, and flow of data through computational steps.
-The answers to these questions must enable others to evaluate the scientific quality of the work, 
+The answers to these questions must enable others to evaluate the scientific quality of the work,
 	and to learn what is necessary to
 	reproduce the results \emph{without} actually repeating every step taken in the original work.
 Provenance is key to enabling researchers to build on computed results reported in prior work with confidence.
 
 For provenance to serve this function, however, it must be possible for researchers unversed in the detailed
-	specifications of Research Objects and the PROV standard~\cite{groth2013provoverviewa} to pose 
+	specifications of Research Objects and the PROV standard~\cite{groth2013provoverviewa} to pose
 	questions and receive answers meaningful for evaluating, using, and building on the
-	processes and products of prior research. 
+	processes and products of prior research.
 In \cite{mcphillips2015retrospective} we provided a number of example queries about a run of a scientific
 	workflow implemented in Python and marked up with YesWorkflow~\cite{mcphillips2015yesworkflowa} annotations.
 Answers to these queries revealed the dependencies of particular workflow outputs
@@ -39,7 +42,7 @@ Such queries would allow a researcher to determine not just that a study as a wh
 For studies that do not qualify as \textsf{FASEB::reproducible} as a whole, researchers
 	could discover which results of the study are \textsf{FASEB::replicable}, and which are not.
 Where a particular results is not \textsf{FASEB::replicable}, they could pose a query
-	that reveals what part of the method that produced the result is 
+	that reveals what part of the method that produced the result is
 	not replicable.
 Answers to such queries could take available technology for reproducing computations
 	into account.
@@ -48,7 +51,7 @@ For example, a particular result might no longer be NAS::reproducible using the
 
 
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
-%%% End: 
+%%% End:

@@ -1,32 +1,38 @@
 
 \section{Introduction}
 
-Publicly funded efforts around the world currently are underway to 
+Publicly funded efforts around the world currently are underway to
 	ensure that computational components of scientific research
 	can be made ``reproducible'' or ``replicable''.
-The ongoing discourse about the perceived ``reproducibility crisis in science''~\cite{fanelli_opinion:_2018} 
+The ongoing discourse about the perceived ``reproducibility crisis in science''~\cite{fanelli_opinion:_2018}
 	is just one illustration of the importance of these efforts.
-The energy invested in the wide-ranging debate over the precise meanings of the 
+The energy invested in the wide-ranging debate over the precise meanings of the
 	terms \emph{reproducible}, \emph{replicable},
         \emph{transparent}, etc.\
-        \cite{drummond2009replicability,carolegoble2016what,freire2016reproducibilitya,goodman2016what,ioannidis2017reproducibility,herouxtoward,plesser2018reproducibility,barba2018terminologies,committeeonreproducibilityandreplicabilityinscience2019reproducibility}, with 
-	respect to research results, processes, and settings is perhaps an even greater indication of 
+        \cite{drummond2009replicability,carolegoble2016what,freire2016reproducibilitya,goodman2016what,ioannidis2017reproducibility,herouxtoward,plesser2018reproducibility,barba2018terminologies,committeeonreproducibilityandreplicabilityinscience2019reproducibility}, with
+	respect to research results, processes, and settings is perhaps an even greater indication of
 	both the significance of these efforts and the challenges they face.
 For while each effort aimed at facilitating reproducible computing in the
 	sciences must clearly define its mission and apply the bulk of its resources
 	to the specific problems it sets out to address, these efforts necessarily do
 	so within the context of broader discussions about the nature, importance,
 	and precise definitions of the qualities of science we wish to extend to computing
-	over the longer time scale.
+	over the longer time scale. At a more fundamental level, reproducibility becomes the entry
+    point for a deeper, more ambitious question about whether any of the epistemological
+    demands placed upon other classes of scientific instrumentation can be expected from
+    computing and simulation \cite{winsberg1999sanctioning}: if these contain inescapable
+    experimental limitations, the expectations of the ongoing cyberinfrastructure revolution
+    \cite{atkins2003revolutionizing} need careful reevaluation.
 
 Within a particular effort it is useful to define terms such as \emph{reproducible} operationally.
-For example, in the Whole Tale project \cite{WT2019,brinckman2019computing} we define a \emph{Reproducible Tale} as one 
-	that \emph{includes sufficient information for the Tale to be re-executed for the review 
+For example, in the Whole Tale project \cite{WT2019,brinckman2019computing} we define a \emph{Reproducible Tale} as one
+	that \emph{includes sufficient information for the Tale to be re-executed for the review
 	and verification of results}.
-Adopting this definition allows us to focus our requirements analysis, system design,
+Adopting this definition allows us to focus our requirements analysis and specification,
+    system design,
 	and software implementation efforts on the specific problems Whole Tale is funded to solve
 	and the use cases we aim to support.
-Supporting publishers who request authors to include all new data, 
+Supporting publishers who request authors to include all new data,
 	code, and workflows needed to reproduce computed artifacts supporting
 	claims in a paper is one such use case targeted by Whole Tale.
 We anticipate that facilitating re-execution of code used to generate
@@ -34,8 +40,8 @@ We anticipate that facilitating re-execution of code used to generate
 	provided data and code do in fact produce those results---thereby addressing
 	a key dimension of the reproducibility challenge currently facing science.
 
-At the same time, it is critical that efforts like Whole Tale contribute to a global 
-	vision of computational reproducibility in the sciences, and clearly situate 
+At the same time, it is critical that efforts like Whole Tale contribute to a global
+	vision of computational reproducibility in the sciences, and clearly situate
 	its particular mission, use cases, and engineering deliverables in this context.
 For while the particular technical problems that Whole Tale and similar projects
 	aim to address are particularly pressing, current efforts by no means
@@ -44,15 +50,18 @@ For while the particular technical problems that Whole Tale and similar projects
 	the challenges of reproducibility.
 In particular, current engineering efforts are unlikely to elevate the computational components
 	of research to the level of reproducibility historically expected of studies in the
-	pure natural sciences such as physics, chemistry, and biology.
+	pure natural sciences such as physics, chemistry, and biology. In general, however, our
+    interest focuses on identifying metrics, methods and tools with potential to improve the
+    current situation based on the belief and intuition that not only the current status can
+    be improved, but that further and unexpected rewards lie ahead by doing so.
 
 Consequently, we view the Whole Tale project---as currently chartered and funded---as just a step
 	towards the kind of platforms, infrastructure, and standards
-	needed to enable researchers using computing technology to routinely 
+	needed to enable researchers using computing technology to routinely
 	achieve the reproducibility long considered the essence of science as a whole.
 In support of this longer-term vision, we outline in this paper % just
  a few of the issues	we aim to investigate and discuss with the broader community over the next few years.
-We anticipate that future iterations of Whole Tale and its sibling efforts 
+We anticipate that future iterations of Whole Tale and its sibling efforts
 	will be driven in part by the problem definitions and solution proposals we collectively
 	develop between now and then.
 
@@ -60,7 +69,7 @@ We anticipate that future iterations of Whole Tale and its sibling efforts
 
 
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
-%%% End: 
+%%% End:

@@ -2,27 +2,38 @@
 
 Modern science is founded on the expectation that the observations, experiments, and
 	predictions that comprise scientific research be independently verifiable by others.
-This requirement, referred to as the \emph{reproducibility} or \emph{replicability} of 
-	science, applies not only to the products of research studies (\emph{substances}, 
-	\emph{results}, \emph{conclusions}, \emph{models}, \emph{data products}, 
+This requirement, referred to as the \emph{reproducibility} or \emph{replicability} of
+	science, applies not only to the products of research studies (\emph{substances},
+	\emph{results}, \emph{conclusions}, \emph{models}, \emph{data products},
 	\emph{predictions}), but also to the activities that ultimately give rise to these
-	products (\emph{methods}, \emph{protocols}, \emph{workflows}); the materials 
-	employed in these activities (\emph{reagents}, \emph{instruments}, 
-	\emph{software}); and the conditions 
+	products (\emph{methods}, \emph{protocols}, \emph{workflows}); the materials
+	employed in these activities (\emph{reagents}, \emph{instruments},
+	\emph{software}); and the conditions
 	under which which these activities are carried out (\emph{temperatures},
 	\emph{instrument settings}, \emph{software parameters},
 	\emph{computing environments}).  When sufficient details are available
 	such that the research products and methods can be reviewed, interpreted, and
-	evaluated by other researchers \emph{without} repeating the work, a study is said to be 
+	evaluated by other researchers \emph{without} repeating the work, a study is said to be
 	\emph{transparent}.
 
 While it is true that studies attempting primarily to reproduce previous results are relatively rare in the
-	pure natural sciences, even the most groundbreaking studies in these fields include components	
+	pure natural sciences, even the most groundbreaking studies in these fields include components
 	that explicitly or implicitly confirm the reproducibility of previously reported results and procedures.
-The expectation is that new studies will reliably produce meaningful results consistent with previous work 
+The expectation is that new studies will reliably produce meaningful results consistent with previous work
 	only if the prior work on which they are based or otherwise relates to is reproducible.
+Formally speaking, we might think about the existence of an isomorphism, a conceptual and
+    pragmatic eqivalence between the original and the reproduced experimental setups involved,
+    that simultaneously provides a translation between their parametrization, inputs, outputs
+    and sources of uncertainty up to an acceptable margin of error determined by the practices
+    of a scientific community.
 In this sense, the whole of basic research in the natural sciences can be seen as an ongoing, massively-parallel
 	reproducibility study that also happens to produce a steady stream of new results.
+Each of them is expected to contain sufficient and necessary information in turn to sustain
+    the character of discovery as a self-correcting search for new knowledge, one in which
+    scientific consensus is built by critical mass of collective failures to falsify a
+    hypothesis using the best tools at hand. The contribution of reproducibility is to ensure
+    that the tools remain available, and that a path exists to systematically determine whether
+    they are the best for the task.
 Exceptions to this pattern occur when studies appear to overturn
 well-established understandings of nature \cite{kuhn1962structure},
 	violate the expectations of how research in a particular field is to be carried out, or otherwise cause controversy.
@@ -32,9 +43,10 @@ In these cases direct attempts may be made to reproduce results by duplicating a
 Even when attempts are made specifically to confirm the reproducibility of particular studies or results, investigators in
 	the natural sciences generally do not expect the processes and products of research to be duplicated exactly.
 The vast majority of quantitative observations made of real world phenomena using scientific instruments
-	are associated with limited precision and other intrinsic uncertainties that must themselves be characterized
+	are associated with limited precision, unknown or intractable sources of complexity,
+    and other intrinsic uncertainties that must themselves be characterized
 	and well understood for science based on them to be considered reproducible.
-It is a hallmark of trustworthy science that quantitative observations and claims are inseparable from these 
+It is a hallmark of trustworthy science that quantitative observations and claims are inseparable from these
 	uncertainties in measurement and their propagation through data analysis.
 
 Similarly, the materials and processes employed in the natural sciences generally are impossible
@@ -42,35 +54,35 @@ Similarly, the materials and processes employed in the natural sciences generall
 In a chemistry laboratory, the precise quantities of input reagents will vary, temperatures will differ, and heating
 	or cooling rates will be unique for each run of a chemical synthesis, no matter how carefully these conditions
 	are controlled; the yield and purity of the intended product necessarily will vary as well from run to run.
-A similar situation holds when measurements are made on samples using a scientific instrument. 
+A similar situation holds when measurements are made on samples using a scientific instrument.
 Different instruments of the same model will vary slightly and produce slightly different results even
 	under identical conditions on identical samples.
 Generally, the original researchers are in the best position to assess the minimum variation expected
-	between runs of a synthesis (they have access to the same batch of reagents and the same equipment), 
+	between runs of a synthesis (they have access to the same batch of reagents and the same equipment),
 	or between repeated readings of an instrument on the same or equivalent samples (they can prepare
 	multiple samples at the same time, and run these samples through the instrument one after the other).
-A researcher attempting to duplicate another's work can expect to see greater deviation from the reported results	
+A researcher attempting to duplicate another's work can expect to see greater deviation from the reported results
 	because the materials and conditions involved will necessarily differ to a greater degree.
 
 This asymmetry between the original researcher and another repeating the work is reflected in the longstanding
-	distinction between \emph{reproducibility} and \emph{replicability} in experimental biology.  
+	distinction between \emph{reproducibility} and \emph{replicability} in experimental biology.
 In  Section\,\ref{sec-repeatability}  we will examine definitions of these terms jointly adopted by twenty-nine research
-	societies in the biological sciences.  
-For now we note that the notion of \emph{replicates}, repeated measurements made to quantify 
+	societies in the biological sciences.
+For now we note that the notion of \emph{replicates}, repeated measurements made to quantify
 	experimental variability, is represented by a rich literature~\cite{robasky_role_2014}.
 This literature distinguishes between distinct modes of experimental replication.
 The term \emph{technical replicates}, for example, refers to repeated measurements performed on the same sample.
 These are used to assess the variation intrinsic to the procedure, apparatus, and instrument employed.
 \emph{Biological replicates} represent measurements made on different but equivalent samples.
 In practice both generally are performed by the original researcher under conditions otherwise
-	held as constant as possible.\footnote{Generating multiple gigabytes of raw data requiring intensive computational analysis for each replicate, Next-Generation Sequencing (NGS) represent just one sub-domain where the reproducibility 
+	held as constant as possible.\footnote{Generating multiple gigabytes of raw data requiring intensive computational analysis for each replicate, Next-Generation Sequencing (NGS) represent just one sub-domain where the reproducibility
 	terminologies in the natural sciences and in computing
         unavoidably collide.}
 
-% BL: not sure where exactly the footnote should be attached ... 
+% BL: not sure where exactly the footnote should be attached ...
 
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
-%%% End: 
+%%% End:

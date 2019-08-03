@@ -1,16 +1,16 @@
 
 \section{Introduction}
 
-Publicly funded efforts around the world currently are underway to 
+Publicly funded efforts around the world currently are underway to
 	ensure that computational components of scientific research
 	can be made ``reproducible'' or ``replicable''.
-The ongoing discourse about the perceived ``reproducibility crisis in science''~\cite{donoho_reproducible_2009,baker_2016,fanelli_opinion:_2018} 
+The ongoing discourse about the perceived ``reproducibility crisis in science''~\cite{donoho_reproducible_2009,baker_2016,fanelli_opinion:_2018}
 	is just one illustration of the importance of these efforts.
-The energy invested in the wide-ranging debate over the precise meanings of the 
+The energy invested in the wide-ranging debate over the precise meanings of the
 	terms \emph{reproducible}, \emph{replicable},
         \emph{transparent}, etc.\
-        \cite{drummond2009replicability,carolegoble2016what,freire2016reproducibilitya,goodman2016what,ioannidis2017reproducibility,herouxtoward,plesser2018reproducibility,barba2018terminologies,committeeonreproducibilityandreplicabilityinscience2019reproducibility}, with 
-	respect to research results, processes, and settings is perhaps an even greater indication of 
+        \cite{drummond2009replicability,carolegoble2016what,freire2016reproducibilitya,goodman2016what,ioannidis2017reproducibility,herouxtoward,plesser2018reproducibility,barba2018terminologies,committeeonreproducibilityandreplicabilityinscience2019reproducibility}, with
+	respect to research results, processes, and settings is perhaps an even greater indication of
 	both the significance of these efforts and the challenges they face.
 For while each effort aimed at facilitating reproducible computing in the
 	sciences must clearly define its mission and apply the bulk of its resources
@@ -20,24 +20,24 @@ For while each effort aimed at facilitating reproducible computing in the
 	over the longer time scale.
 
 Within a particular effort it is useful to define terms such as \emph{reproducible} operationally.
-For example, in the Whole Tale project \cite{WT2019,brinckman2019computing} we define a \emph{Reproducible Tale} as one 
-	that \emph{includes sufficient information for the Tale to be re-executed for the review 
+For example, in the Whole Tale project \cite{WT2019,brinckman2019computing} a \emph{Reproducible Tale} is one
+	that \emph{includes sufficient information for the Tale to be re-executed for the review
 	and verification of results}.
-Adopting this definition allows us to focus our requirements analysis, system design,
+Adopting this definition focuses requirements analysis, system design,
 	and software implementation efforts on the specific problems Whole Tale is funded to solve
-	and the use cases we aim to support.
-Supporting publishers who request authors to include all new data, 
+	and the use cases it aims to support.
+Supporting publishers who request authors to include all new data,
 	code, and workflows needed to reproduce computed artifacts supporting
 	claims in a paper is one such use case targeted by Whole Tale.
-We anticipate that facilitating re-execution of code used to generate
+Facilitating re-execution of code used to generate
 	key products of a study will enable publishers routinely to confirm that
 	provided data and code do in fact produce those results---thereby addressing
 	a key dimension of the reproducibility challenge currently facing science.
 
-At the same time, it is critical that efforts like Whole Tale contribute to a global 
-	vision of computational reproducibility in the sciences, and clearly situate 
+At the same time, it is critical that efforts like Whole Tale contribute to a global
+	vision of computational reproducibility in the sciences, and clearly situate
 	its particular mission, use cases, and engineering deliverables in this context.
-For while the particular technical problems that Whole Tale and similar projects
+For while the particular technical problems these projects
 	aim to address are particularly pressing, current efforts by no means
 	represent the entire landscape of concepts, problems, and technical options
 	that will require further discussion, clarification, and analysis if we are to meet
@@ -46,41 +46,40 @@ In particular, current engineering efforts are unlikely to elevate the computati
 	of research to the level of reproducibility historically expected of studies in the
 	pure natural sciences such as physics, chemistry, and biology.
 
-Consequently, we view the Whole Tale project---as currently chartered and funded---as just a step
-	towards the kind of platforms, infrastructure, and standards
-	needed to enable researchers using computing technology to routinely 
+Consequently, the current generation of efforts to build reproducility platforms represents
+    just a step towards the kind of platforms, infrastructure, and standards
+	needed to enable researchers using computing technology to routinely
 	achieve the reproducibility long considered the essence of science as a whole.
-In support of this longer-term vision, we outline in this paper % just
- a few of the issues	we aim to investigate and discuss with the broader community over the next few years.
-We anticipate that future iterations of Whole Tale and its sibling efforts 
+In support of this longer-term vision, we outline in this paper
+ a few of the issues we aim to investigate and discuss with the broader community over the next few years.
+We anticipate that future iterations of Whole Tale and its sibling efforts
 	will be driven in part by the problem definitions and solution proposals we collectively
 	develop between now and then.
 
-In the remainder of this paper 
-we briefly discuss four topics we plan to investigate
-	in the course of the Whole Tale project.
+In the remainder of this paper we briefly discuss five topics we plan to investigate
+	as part of this research agenda.
 In Section\,\ref{sec-reproducibility} we review the general notion of
-reproducibility in science, and in Section\,\ref{sec-repeatability} 
-	highlight how digital computing in principle makes possible a completely new kind of reproducibility: 
-	\emph{exact repeatability}. 
+reproducibility in science, and in Section\,\ref{sec-repeatability}
+	highlight how digital computing in principle makes possible a completely new kind of reproducibility:
+	\emph{exact repeatability}.
 We emphasize that the notion of \emph{transparency}---long a critical element of
 	reproducibillity in the pure natural sciences---has a role to play even for those computational components
 	of research where exact repeatability is feasible.
 In Section\,\ref{sec-terminology} we provide an overview of several dimensions of the terminological debate around reproducibility
-	generally, and propose that a pluralistic approach to defining key terms is essential if a general 
+	generally, and propose that a pluralistic approach to defining key terms is essential if a general
 	concept of reproducibility is to be shared across disciplines.
 In Section\,\ref{sec-limitations} we summarize a number of limitations on exact repeatability in practice, and in Section\,\ref{sec-transparency}
 	show how science-oriented provenance queries can mitigate such limitations by maintaining
  	the transparency most essential to reproducibility in science.
 Throughout, we highlight the role that Research Objects \cite{bechhofer2013whya}
-	can serve in supporting and maintaining reproducibility 
-	by encapsulating the information needed to rerun the computational steps in a study, 
-	by disambiguating claims about reproducibility, 
-	and by enabling transparency via queries of provenance information packaged in the object. 
+	can serve in supporting and maintaining reproducibility
+	by encapsulating the information needed to rerun the computational steps in a study,
+	by disambiguating claims about reproducibility,
+	and by enabling transparency via queries of provenance information packaged in the object.
 
 
 
-%%% Local Variables: 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
-%%% End: 
+%%% End:

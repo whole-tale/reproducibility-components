@@ -60,8 +60,13 @@ At the same time it is important that the standards, technologies,
 	computational best-practices, and infrastructure we develop and advocate in fact support scientific reproducibility.
 It is not enough, in the long run, to pursue and support exact computational repeatability where we can, 
 	and to get as close as possible otherwise.
-Rather, computational repeatability is best seen as a dimension of research reproducibility \emph{orthogonal} to 
-	the dimension of transparency.
+Rather, computational repeatability is best seen as a dimension of research reproducibility 
+	\emph{orthogonal}\footnote{In the geometric (not the statistical) sense of the word.
+	Most scripts associated with a study indeed contribute to both transparency and repeatability.  But not 
+	infrequently an artifact in a study contributes only to one or the other
+	of these dimensions. For example, an invocation of a
+	remote web service that effectively operates as a black box can be considered repeatable but not transparent.}
+	to the dimension of transparency.
 It is possible to achieve computational repeatability without providing research transparency---and vice versa.
 Moreover, exact repeatability is \emph{not} an essential element of
 scientific reproducibility in the broadest sense of the term. \emph{Transparency} arguably is.

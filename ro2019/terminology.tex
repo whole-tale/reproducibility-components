@@ -178,28 +178,29 @@ Given that a particular researcher is likely to depend on or extend results that
 Capabilities for reasoning about definitions, verification workflows, and awarded
     badges in this way also would benefit emerging reproducibility platforms that
     target research with non-computational components.
-Biomolecular nuclear magnetic resonance (NMR) spectroscopy is
+Biomolecular nuclear magnetic resonance (bioNMR) spectroscopy is
     computationally intensive, with studies requiring dozens of software tools for data
     processing and analysis.
-The NMRbox project (Maciejewski, et al., 2017) aims to foster reproducibility of such studies
+The NMRbox project~\cite{maciejewski_nmrbox:_2017} aims to foster reproducibility of such studies
     by providing researchers with access to
     Xubuntu virtual machines provisioned with more than 100 software tools used by this community.
 Each VM image is versioned, stored in its entirety, and made
     available long-term to make the software environments, computations, and end-to-end workflows
     employed in a particular study computationally reproducible.
-NMRbox uses PREMIS to represent and store provenance metadata, and packages this metadata with
+NMRbox uses PREMIS~\cite{premis2019} to represent and store provenance metadata,
+    and packages this metadata with
     processed data and results to support transparency both of the analysis and of the NMR
-    experiment itself (Heintz and Gryk, 2018).
+    experiment itself~\cite{heintz_curating_2019}.
 Queries probing the reproducibility of a particular result produced, archived, and shared
     using NMRbox necessarily would span claims made both about the (non-computational)
     experimental procedures employed, \emph{and} the computational analysis performed on
     the resulting experimental data.
 
-%We are hopeful that...
 Going forward, we aim to explore the various terminologies surrounding
     reproducibility with the goal of identifying what might be considered the
-    ``principle components'' of reproducibility---not just of computational reproducibility,
-    but of reproducibility in science as a whole.
+    ``principle components'' of reproducibility.
+%    ---not just of computational reproducibility,
+%    but of reproducibility in science as a whole.
 We could then determine how various terms and definitions,
     put forward to meet the needs of particular research communities,
     can be seen as compositions of these shared components.

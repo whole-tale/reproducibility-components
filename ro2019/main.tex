@@ -1,54 +1,69 @@
-% start of document preamble
+\documentclass[conference]{IEEEtran}
 
-%%%% Proceedings format for most of ACM conferences (with the exceptions listed below) and all ICPS volumes.
-\documentclass[sigconf,screen,nonacm]{acmart}
-%\documentclass[sigconf]{acmart}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
 
-%\acmConference[TaPP]{Theory and Practice of Provenance}{June 3, 2019}{Philadelphia, PA}
-%\setcopyright{rightsretained}
+\usepackage{hyperref}
 
-% defining the \BibTeX command - from Oren Patashnik's original BibTeX documentation.
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08emT\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
- 
-\usepackage[english]{babel}
-\usepackage{enumitem}
-\setlist[itemize]{leftmargin=3 mm}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
-\input{abstract}
-
-
-% start of the body of the document body.
 \begin{document}
 
-% title
-\title[Reproducibility by Other Means]{Reproducibility by Other Means: Transparent Research Objects}
-
-\author{Timothy M. McPhillips$^1$ \qquad Craig Willis$^2$ \qquad Michael
-  R. Gryk$^1$}
-
-\author{ Santiago Nu\~{n}ez-Corrales$^3$ \qquad Bertram
-  Lud\"ascher$^{1{-}4}$}
-
-% BL: The braces don't seem to work ... 
-%\email{\{tmcphill,lanl2,nnp2,ludaesch\}@illinois.edu}
- 
-% BL: so let's do some manual hacking: 
-\affiliation{%
-  \institution{
-    \medskip
-    $^1$School of Information Sciences \qquad $^2$NCSA \qquad
-    $^3$Illinois Informatics \qquad $^4$Department of Computer Science
-    \medskip   \\  
-    University of Illinois at Urbana-Champaign \medskip \\ 
-    \texttt{\{tmcphill,willis8,gryk2,nunezco2,ludaesch\}@illinois.edu} }
+\title{
+    Reproducibility by Other Means:\\
+    Transparent Research Objects
 }
 
+\author{
+    \IEEEauthorblockN{Timothy M. McPhillips}
+    \IEEEauthorblockA{
+        \textit{School of Information Sciences} \\
+        \textit{University of Illinois at Urbana-Champaign} \\
+        Champaign, IL \\
+        tmcphill@illinois.edu
+    }
+\and
+    \IEEEauthorblockN{Craig Willis}
+    \IEEEauthorblockA{
+        \textit{NCSA} \\
+        \textit{University of Illinois at Urbana-Champaign} \\
+        Champaign, IL \\
+        willis8@illinois.edu
+    }
+\and
+    \IEEEauthorblockN{Michael R. Gryk}
+    \IEEEauthorblockA{
+        \textit{School of Information Sciences} \\
+        \textit{University of Illinois at Urbana-Champaign} \\
+        Champaign, IL \\
+        gryk2@illinois.edu
+    }
+\and
+    \IEEEauthorblockN{Santiago Nu\~{n}ez-Corrales}
+    \IEEEauthorblockA{
+        \textit{Illinois Informatics} \\
+        \textit{University of Illinois at Urbana-Champaign} \\
+        Champaign, IL \\
+        gryk2@illinois.edu
+    }
+\and
+    \IEEEauthorblockN{Bertram Lud\"ascher}
+    \IEEEauthorblockA{
+        \textit{School of Information Sciences} \\
+        \textit{University of Illinois at Urbana-Champaign}\\
+        Champaign, IL \\
+        ludaesch@illinois.edu
+    }
+}
 
-% BL: commit/push test (ignore) 
-
-% This command processes the author and affiliation and title information and builds the first part of the formatted document.
 \maketitle
 
+\input{abstract}
 \input{introduction}
 \input{reproducibility}
 \input{repeatability}
@@ -58,29 +73,7 @@
 \input{conclusion}
 \input{acknowledgments}
 
-%\section{Example Provenance Questions}
-
-%Let's do some \emph{italics} and \texttt{teletype} and \textsf{sans
-%  serif}. Does it work?
-%Here's a bit of code, very simple via \verb|some verbatim| in line, or
-%\begin{verbatim}
-%.. in some separate verbatim paragraphs ..
-%Does it work?
-%   Even indentation should work .. 
-%\end{verbatim}
-
-
-%\section{Future Work}
-
-
-% \begin{acks}
-% Work supported in part by NSF award 1541450 (Whole Tale).
-% \end{acks}
-
-%
-% The next two lines define the bibliography style to be used, and the bibliography file.
-%\bibliographystyle{alpha-initials-big}
 \bibliographystyle{abbrv}
-\bibliography{main}
+\bibliography{bibliography}
 
 \end{document}
